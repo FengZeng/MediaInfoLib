@@ -10,7 +10,7 @@ set(ZenLib_VERSION ${ZenLib_MAJOR_VERSION}.${ZenLib_MINOR_VERSION}.${ZenLib_PATC
 if(WIN32)
   set(BUILD_SHARED_LIBS OFF)
 else()
-  option(BUILD_SHARED_LIBS "Build shared libs" ON)
+  option(BUILD_SHARED_LIBS "Build shared libs" OFF)
 endif()
 
 option(ENABLE_UNICODE "Enable unicode support" ON)
