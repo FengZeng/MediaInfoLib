@@ -167,15 +167,15 @@ String MediaInfo::Get(stream_t StreamKind, size_t StreamPos, const String &Param
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-size_t MediaInfo::Set(const String &, stream_t, size_t, size_t, const String &)
+size_t MediaInfo::Set(const String &ToSet, stream_t StreamKind, size_t StreamPos, size_t Parameter, const String &OldValue)
 {
-    return 0; //Not yet implemented
+    return Internal->Set(ToSet, StreamKind, StreamPos, Parameter,OldValue);
 }
 
 //---------------------------------------------------------------------------
-size_t MediaInfo::Set(const String &, stream_t, size_t, const String &, const String &)
+size_t MediaInfo::Set(const String &ToSet, stream_t StreamKind, size_t StreamPos, const String &Parameter, const String &OldValue)
 {
-    return 0; //Not yet implemented
+    return Internal->Set(ToSet, StreamKind, StreamPos, Parameter, OldValue);
 }
 
 //***************************************************************************
