@@ -169,6 +169,8 @@ public :
         /// @retval 0 failed
     size_t Set (const String &ToSet, stream_t StreamKind, size_t StreamNumber, const String &Parameter, const String &OldValue=String());
 
+    size_t Set (stream_t StreamKind, String& val, size_t Parameter);
+
     //Output_Buffered
         /// Output the written size when "File_Duplicate" option is used.
         /// @brief Output the written size when "File_Duplicate" option is used.

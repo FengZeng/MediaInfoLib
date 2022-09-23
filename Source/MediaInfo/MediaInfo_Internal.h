@@ -91,6 +91,8 @@ public :
     size_t Set (const String &ToSet, stream_t StreamKind, size_t StreamNumber, size_t Parameter, const String &OldValue=__T(""));
     size_t Set (const String &ToSet, stream_t StreamKind, size_t StreamNumber, const String &Parameter, const String &OldValue=__T(""));
 
+    size_t Set(stream_t StreamKind, String& val, size_t Parameter);
+
     //Output_Buffered
     size_t Output_Buffer_Get (const String &Value);
     size_t Output_Buffer_Get (size_t Pos);

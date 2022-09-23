@@ -2223,6 +2223,15 @@ size_t MediaInfo_Internal::Set(const String &ToSet, stream_t StreamKind, size_t 
     return Info->Set(StreamKind, StreamPos, Parameter, ToSet, OldValue);
 }
 
+size_t MediaInfo_Internal::Set(stream_t StreamKind, String& val, size_t Parameter)
+{
+    CriticalSectionLocker CSL(CS);
+    if (!Info)
+        return 0;
+    Info->Fill(StreamKind, 0, Parameter, val, true);
+    return 1;
+}
+
 //***************************************************************************
 // Output buffer
 //***************************************************************************
