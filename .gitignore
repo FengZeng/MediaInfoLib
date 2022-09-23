@@ -47,4 +47,5 @@ MediaInfoLib.VC.db
 *.VC.db-shm
 *.VC.db-wal
 _build-*
-
+.vscode
+zconf.h*
